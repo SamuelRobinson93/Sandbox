@@ -1,0 +1,73 @@
+<!--
+Interesting things to do:
+Show average negative scores for interesting comparisons (bad restaurant, serial killer manifesto, bad movie, etc)
+Show average positive scores for interesting comparisons (Ghandi quotes, Sesame tv show, good movie, good restaurant etc)
+Compare two things of text - show their comparison in interesting ways
+Fix the time series data to make a more understandable x-axis
+Search for the frequency of a user selected word (box for user input, search through for that word, return that word array.length)
+-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Fun Analysis</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script type="text/javascript" src="analysis1.js"></script>
+	
+</head>
+
+<body>
+	<font color="red"><h1>Fun Analysis</h1></font>
+	<p>Press the Left keyboard key to show charts<br>
+	<font color="blue"><p>Some text</p></font>
+	<p>-5 = Less Fun<br>
+		5 = More Fun<br></p>
+	
+	<p>
+		<br>
+		
+		<textarea id="txtBox" cols=50 rows=10 placeholder="Source: Enter text here..."></textarea>
+		<br>
+		<input type="submit" name="button" id="button1" onclick="submitText()">
+		<br>
+	</p>
+	<p>
+		<textarea id="userSearch" cols=40 rows=2 placeholder="One word to search stats for..."></textarea>
+		<input type="submit" name="button" id="button2" onclick="userWordSearch()">
+		<p id="countSearch">Source 1 Total: </p>
+	</p><br>
+		
+		<div style= "width:40vw">
+			<canvas id="myChart"></canvas>
+		</div>
+		<div style= "width:80vw">
+			<canvas id="myChart2"></canvas>
+		</div>
+		<div style= "width:30vw">
+			<canvas id="myChart3"></canvas>
+		</div>
+		<div style= "width:30vw">
+			<canvas id="myChart4"></canvas>
+		</div>
+		
+		<p><b>Source 1</b></p>
+		<p id="score">Total Score: </p>
+		<p id="average">Average Score: </p>
+		<p id="totalWords">Total words: </p>
+		<p id="neutPerc">% Neutral words: </p>
+		<p id="neutCount"># Neutral words: </p>
+		<p id="posPerc">% Fun words: </p>
+		<p id="posCount"># Fun words: </p>
+		<p id="negPerc">% Boring words: </p>
+		<p id="negCount"># Boring words: </p>
+		<p id="cursePerc">% Curse words: </p>
+		<p id="curseCount"># Curse words: </p>
+		<!--<p id="timeSeries">Time Series: </p>-->
+		<p id="wordlist">Fun/Boring List: </p>
+		<p id="posWordlist">Fun List: </p>
+		<p id="negWordlist">Borign List: </p>
+		<p id="curseWordlist">Curse List: </p>
+		<p id="neutralWordlist">Neutral List: </p>
+
+</body>
+</html>
